@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investe Franca</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://use.typekit.net/fuv4zie.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Franca - Página inicial">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 55" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="44">
+            <path d="M25 2C25 2 8 12 8 28C8 38 16 48 25 52C34 48 42 38 42 28C42 12 25 2 25 2Z" fill="#FF6B00"/>
+            <path d="M25 10C25 10 14 18 14 28C14 35 19 42 25 46C31 42 36 35 36 28C36 18 25 10 25 10Z" fill="#1a2a4a"/>
+            <path d="M25 18C25 18 20 22 20 28C20 32 22 36 25 38C28 36 30 32 30 28C30 22 25 18 25 18Z" fill="#4CAF50"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-franca">INVESTE</span>
+          <span class="logo-sub">FRANCA</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active">Início</a></li>
+        <li><span class="nav-menu"> | </span></li>
+        <li><a href="#por-que-franca" class="nav-link">Estrutura</a></li>
+        <li><a href="#investe-franca" class="nav-link">Investe Franca</a></li>
+        <li><a href="#programas" class="nav-link">Programas de Apoio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-shapes">
+      <div class="hero-shape-1"></div>
+      <div class="hero-shape-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-map-marker-alt"></i> Franca, SP — Brasil
+        </div>
+        <h1 class="hero-title">
+          Franca abre<br/>
+          <span class="highlight-orange">novas portas</span><br/>
+          <span class="hero-subtitle-line">para a sua empresa</span>
+        </h1>
+        <p class="hero-desc">
+          Menos burocracia, mais apoio e estrutura para você abrir, expandir ou investir.
+        </p>
+        <div class="hero-actions">
+          <a href="#investe-franca" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> Quero Investir em Franca
+          </a>
+          <a href="#por-que-franca" class="btn btn-outline-white">
+            <i class="fas fa-play-circle"></i> Saiba Mais
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-person-card">
+          <div class="hero-person-img">
+            <svg viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <defs>
+                <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#1a2a4a;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#0d1a2e;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="person-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#c8a87a;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#a07050;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <rect width="320" height="420" fill="url(#bg-grad)" rx="16"/>
+              <!-- Body / suit -->
+              <rect x="80" y="260" width="160" height="180" fill="#1f3060" rx="8"/>
+              <rect x="130" y="260" width="60" height="180" fill="#162548"/>
+              <!-- Shirt & tie -->
+              <rect x="130" y="260" width="60" height="60" fill="#f0f0f0"/>
+              <polygon points="150,260 170,260 160,310" fill="#FF6B00"/>
+              <!-- Head -->
+              <ellipse cx="160" cy="200" rx="55" ry="65" fill="url(#person-grad)"/>
+              <!-- Hair -->
+              <ellipse cx="160" cy="148" rx="55" ry="22" fill="#1a1005"/>
+              <rect x="105" y="148" width="110" height="20" fill="#1a1005"/>
+              <!-- Ears -->
+              <ellipse cx="105" cy="205" rx="10" ry="14" fill="#b89060"/>
+              <ellipse cx="215" cy="205" rx="10" ry="14" fill="#b89060"/>
+              <!-- Eyes -->
+              <ellipse cx="142" cy="195" rx="8" ry="9" fill="white"/>
+              <ellipse cx="178" cy="195" rx="8" ry="9" fill="white"/>
+              <ellipse cx="143" cy="196" rx="5" ry="6" fill="#1a1005"/>
+              <ellipse cx="179" cy="196" rx="5" ry="6" fill="#1a1005"/>
+              <!-- Eyebrows -->
+              <rect x="133" y="183" width="20" height="4" fill="#1a1005" rx="2"/>
+              <rect x="167" y="183" width="20" height="4" fill="#1a1005" rx="2"/>
+              <!-- Nose -->
+              <ellipse cx="160" cy="215" rx="6" ry="4" fill="#a07050"/>
+              <!-- Mouth -->
+              <path d="M 145 228 Q 160 238 175 228" stroke="#6b3a1f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Tablet in hand -->
+              <rect x="195" y="290" width="70" height="50" fill="#2d4a8a" rx="5"/>
+              <rect x="198" y="293" width="64" height="44" fill="#3a5fa0" rx="3"/>
+              <line x1="205" y1="302" x2="255" y2="302" stroke="#FF6B00" stroke-width="2"/>
+              <line x1="205" y1="310" x2="245" y2="310" stroke="white" stroke-width="1.5" opacity="0.6"/>
+              <line x1="205" y1="318" x2="250" y2="318" stroke="white" stroke-width="1.5" opacity="0.6"/>
+              <line x1="205" y1="326" x2="240" y2="326" stroke="white" stroke-width="1.5" opacity="0.6"/>
+              <!-- Arms -->
+              <rect x="80" y="280" width="50" height="100" fill="#c8a87a" rx="10"/>
+              <rect x="190" y="280" width="50" height="100" fill="#c8a87a" rx="10"/>
+              <!-- Background airplane silhouette -->
+              <g opacity="0.15" transform="translate(20,40)">
+                <path d="M240 60 L260 55 L270 65 L250 70 Z" fill="white"/>
+                <path d="M255 62 L295 58 L295 67 L255 68 Z" fill="white"/>
+                <path d="M260 55 L270 35 L275 38 L265 58 Z" fill="white"/>
+                <path d="M260 70 L265 85 L270 84 L265 70 Z" fill="white"/>
+              </g>
+            </svg>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">3.5%</span>
+              <span class="stat-label">ISS Reduzido</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">350+</span>
+              <span class="stat-label">Empresas Apoiadas</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">24h</span>
+              <span class="stat-label">Abertura de Empresa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== POR QUE FRANCA ===== -->
+  <section class="section-white" id="por-que-franca">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-tag">Diferenciais</span>
+      </div>
+      <h2 class="section-title dark">Por que escolher<br/><span class="orange-text">Franca?</span></h2>
+      <p class="section-subtitle">
+        Franca oferece um ecossistema completo para quem quer empreender com segurança, agilidade e suporte institucional sólido. Conheça os principais motivos para instalar sua empresa aqui.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Localização estratégica em Franca</h3>
+            <p>Situada no interior de São Paulo, Franca conta com acesso privilegiado a rodovias, aeroporto e proximidade com grandes centros consumidores do Brasil, facilitando logística e distribuição.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Incentivos que potencializam o crescimento</h3>
+            <p>Benefícios fiscais atrativos, incluindo redução de ISS, isenção de IPTU e outras vantagens tributárias para empresas que se instalam e geram empregos no município.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Mão de obra qualificada e abundante</h3>
+            <p>Franca possui universidades, faculdades e centros técnicos que formam continuamente profissionais capacitados para diversas áreas, garantindo mão de obra qualificada para seu negócio.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Polo de negócios em constante expansão</h3>
+            <p>Reconhecida mundialmente pela indústria calçadista, Franca diversificou sua economia e hoje abriga negócios de tecnologia, agronegócio, saúde e serviços com forte potencial de crescimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INVESTE FRANCA ===== -->
+  <section class="section-orange" id="investe-franca">
+    <div class="container">
+      <div class="investe-header">
+        <div class="section-label light">
+          <span class="label-tag-light">Programa Municipal</span>
+        </div>
+        <h2 class="section-title light">Investe Franca</h2>
+      </div>
+
+      <div class="investe-grid">
+        <div class="investe-card">
+          <div class="investe-card-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3>Mais Incentivos para Investir</h3>
+          <p>Pacote completo de benefícios para empresas que optam por Franca como sede de operações:</p>
+          <ul class="investe-list">
+            <li><i class="fas fa-check-circle"></i> Isenção de IPTU por até 10 anos</li>
+            <li><i class="fas fa-check-circle"></i> Redução de ISS para 2%</li>
+            <li><i class="fas fa-check-circle"></i> Doação ou cessão de terrenos em áreas industriais</li>
+            <li><i class="fas fa-check-circle"></i> Subsídio para contratação de mão de obra local</li>
+          </ul>
+        </div>
+
+        <div class="investe-card">
+          <div class="investe-card-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Menos Burocracia e Mais Agilidade</h3>
+          <p>Processos simplificados para que você foque no que realmente importa: o crescimento do seu negócio.</p>
+          <ul class="investe-list">
+            <li><i class="fas fa-check-circle"></i> Abertura de empresa em até 24 horas</li>
+            <li><i class="fas fa-check-circle"></i> Alvará de funcionamento digital</li>
+            <li><i class="fas fa-check-circle"></i> Atendimento prioritário para investidores</li>
+            <li><i class="fas fa-check-circle"></i> Plataforma online integrada de serviços</li>
+          </ul>
+        </div>
+
+        <div class="investe-card">
+          <div class="investe-card-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Apoio para Instalar e Crescer</h3>
+          <p>Da chegada à consolidação, Franca oferece suporte completo em todas as etapas do seu negócio.</p>
+          <ul class="investe-list">
+            <li><i class="fas fa-check-circle"></i> Consultoria gratuita para instalação</li>
+            <li><i class="fas fa-check-circle"></i> Conexão com fornecedores e parceiros locais</li>
+            <li><i class="fas fa-check-circle"></i> Apoio na captação de crédito e financiamento</li>
+            <li><i class="fas fa-check-circle"></i> Networking com o ecossistema empresarial</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="investe-cta">
+        <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+          <i class="fas fa-arrow-right"></i> Saiba mais sobre Investe Franca
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PESSOAS / BANNER ===== -->
+  <section class="people-banner">
+    <div class="people-strip">
+      <div class="person-photo" style="background-image: url('https://sspark.genspark.ai/cfimages?u1=3PSoBKTL5D79R44ADYudtAk5VzVA3AIasbhKE13LB6Ur562MHLeOvoII9wq7ggy3DpTiBkLzwwzrrEO5lGPTD%2FOlHERMaERqm1Q1NZnlOzhWE%2BGe8xvgaTsg%2Bx6Ww13iD6XqP5gq2w8GtvP5rh3fRirluekTFtwG&u2=PV7WlKpVHTbO0Agh&width=2560')">
+        <div class="person-overlay"></div>
+      </div>
+      <div class="person-photo person-svg">
+        <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <rect width="200" height="260" fill="#2a4a2a"/>
+          <ellipse cx="100" cy="95" rx="42" ry="50" fill="#8B5E3C"/>
+          <rect x="58" y="140" width="84" height="130" fill="#1a3a6a"/>
+          <ellipse cx="100" cy="60" rx="44" ry="18" fill="#2d1a0a"/>
+          <ellipse cx="80" cy="92" rx="6" ry="7" fill="white"/>
+          <ellipse cx="120" cy="92" rx="6" ry="7" fill="white"/>
+          <ellipse cx="81" cy="93" rx="4" ry="5" fill="#1a1005"/>
+          <ellipse cx="121" cy="93" rx="4" ry="5" fill="#1a1005"/>
+          <path d="M 88 115 Q 100 122 112 115" stroke="#6b3a1f" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="person-overlay"></div>
+      </div>
+      <div class="person-photo person-svg">
+        <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <rect width="200" height="260" fill="#4a3a2a"/>
+          <ellipse cx="100" cy="95" rx="42" ry="50" fill="#c8a87a"/>
+          <rect x="58" y="140" width="84" height="130" fill="#FF6B00"/>
+          <rect x="85" y="140" width="30" height="130" fill="#cc5500"/>
+          <ellipse cx="100" cy="55" rx="44" ry="18" fill="#3d2510"/>
+          <ellipse cx="80" cy="92" rx="6" ry="7" fill="white"/>
+          <ellipse cx="120" cy="92" rx="6" ry="7" fill="white"/>
+          <ellipse cx="81" cy="93" rx="4" ry="5" fill="#1a1005"/>
+          <ellipse cx="121" cy="93" rx="4" ry="5" fill="#1a1005"/>
+          <path d="M 88 115 Q 100 123 112 115" stroke="#6b3a1f" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="person-overlay"></div>
+      </div>
+      <div class="person-photo" style="background-image: url('https://sspark.genspark.ai/cfimages?u1=dhWuOBdsfsnc%2Flq5KINTy3Tph5%2BEz1upZPf9MEYmqZSo5r5LfVvRbN6JuWTPkbiL2K%2BiF59tXGaL%2BJru7x1CR5Z50A29xzju%2BAtfjJtvyBUFvXWJYHIRASuoVX0Ta688uDSHXQAyH4Q3YkVYkFhHEmpUY%2BRTL58Gcw%3D%3D&u2=m1IXIe7FeQQzkrhC&width=2560')">
+        <div class="person-overlay"></div>
+      </div>
+      <div class="person-photo person-svg">
+        <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <rect width="200" height="260" fill="#1a2a4a"/>
+          <ellipse cx="100" cy="95" rx="42" ry="50" fill="#d4a574"/>
+          <rect x="58" y="140" width="84" height="130" fill="#2c3e6a"/>
+          <ellipse cx="100" cy="58" rx="46" ry="22" fill="#5c3010"/>
+          <ellipse cx="80" cy="92" rx="6" ry="7" fill="white"/>
+          <ellipse cx="120" cy="92" rx="6" ry="7" fill="white"/>
+          <ellipse cx="81" cy="93" rx="4" ry="5" fill="#1a1005"/>
+          <ellipse cx="121" cy="93" rx="4" ry="5" fill="#1a1005"/>
+          <path d="M 88 115 Q 100 124 112 115" stroke="#6b3a1f" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="person-overlay"></div>
+      </div>
+    </div>
+    <div class="people-message">
+      <h2>Empresas de todos os tamanhos<br/><span class="orange-text">encontram espaço em Franca</span></h2>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMAS DE APOIO ===== -->
+  <section class="section-white" id="programas">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-tag">Apoio ao Empreendedor</span>
+      </div>
+      <h2 class="section-title dark">Já empreende ou quer começar?<br/><span class="orange-text">Franca apoia você</span></h2>
+      <p class="section-subtitle">
+        Se você é micro ou pequeno empreendedor, a cidade oferece suporte em todas as etapas do negócio.
+      </p>
+
+      <div class="accordion" id="accordion">
+
+        <!-- Item 1 -->
+        <div class="accordion-item active" data-index="0">
+          <button class="accordion-header" aria-expanded="true" aria-controls="acc-body-0">
+            <div class="acc-header-inner">
+              <div class="acc-icon orange">
+                <i class="fas fa-store"></i>
+              </div>
+              <span class="acc-title">Sala do Empreendedor</span>
+            </div>
+            <div class="acc-toggle">
+              <i class="fas fa-minus"></i>
+            </div>
+          </button>
+          <div class="accordion-body" id="acc-body-0">
+            <div class="acc-body-inner">
+              <p>
+                Atendimento direto para quem quer abrir, formalizar ou desenvolver seu negócio com mais facilidade.
+              </p>
+              <ul class="acc-features">
+                <li><i class="fas fa-check"></i> Orientação para abertura e formalização de empresas</li>
+                <li><i class="fas fa-check"></i> Apoio na regularização de atividades</li>
+                <li><i class="fas fa-check"></i> Esclarecimento de dúvidas sobre processos e serviços</li>
+                <li><i class="fas fa-check"></i> Atendimento ágil e direto, reduzindo burocracia e faciliatando cada etapa</li>
+              </ul>
+              <p>Rua Frederico Moura 1817 - Cidade Nova</p>
+              <p>Segunda a sexta, das 8h30 às 16h30</p>
+              <p>(16) 3721-4669</p>
+              <p>saladoempreendedor@franca.sp.gov.br</p>
+              <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="acc-cta">
+                >> Conhecer a Sala do Empreendedor  <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item" data-index="1">
+          <button class="accordion-header" aria-expanded="false" aria-controls="acc-body-1">
+            <div class="acc-header-inner">
+              <div class="acc-icon dark">
+                <i class="fas fa-coins"></i>
+              </div>
+              <span class="acc-title">Bora Crescer</span>
+            </div>
+            <div class="acc-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </button>
+          <div class="accordion-body" id="acc-body-1" hidden>
+            <div class="acc-body-inner">
+              <p>
+                Mais do que orientação, o <strong>Bora Crescer</strong> oferece acesso suporte técnico prático para quem quer sair da informalidade ou melhorar a gestão do seu negócio.
+
+              </p>
+              <ul class="acc-features">
+                <li><i class="fas fa-check"></i> Orientação para formalização como MEI ou atividade autônoma</li>
+                <li><i class="fas fa-check"></i> Apoio para organização e crescimento do negócio</li>
+                <li><i class="fas fa-check"></i> Acesso facilitado a programas públicos e linhas de crédito</li>
+                <li><i class="fas fa-check"></i> Atendimento integrado com a <strong>Sala do Empreendedor</strong></li>
+              </ul>
+              <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="acc-cta">
+                >> Saiba mais sobre o Bora Crescer <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item" data-index="2">
+          <button class="accordion-header" aria-expanded="false" aria-controls="acc-body-2">
+            <div class="acc-header-inner">
+              <div class="acc-icon dark">
+                <i class="fas fa-flask"></i>
+              </div>
+              <span class="acc-title">Sandbox Regulatório</span>
+            </div>
+            <div class="acc-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </button>
+          <div class="accordion-body" id="acc-body-2" hidden>
+            <div class="acc-body-inner">
+              <p>
+                O <strong>Sandbox Regulatório de Franca</strong> é um ambiente controlado que permite que startups e empresas inovadoras testem novos modelos de negócio, produtos e serviços com flexibilidade regulatória supervisionada. Ideal para quem busca inovar sem as amarras da regulação tradicional.
+              </p>
+              <ul class="acc-features">
+                <li><i class="fas fa-check"></i> Ambiente seguro para testar inovações</li>
+                <li><i class="fas fa-check"></i> Flexibilidade regulatória por prazo determinado</li>
+                <li><i class="fas fa-check"></i> Suporte jurídico especializado</li>
+                <li><i class="fas fa-check"></i> Mentoria com especialistas do setor</li>
+              </ul>
+              <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="acc-cta">
+                Conhecer o Sandbox Regulatório <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item" data-index="3">
+          <button class="accordion-header" aria-expanded="false" aria-controls="acc-body-3">
+            <div class="acc-header-inner">
+              <div class="acc-icon orange">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <span class="acc-title">Emprega Franca</span>
+            </div>
+            <div class="acc-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </button>
+          <div class="accordion-body" id="acc-body-3" hidden>
+            <div class="acc-body-inner">
+              <p>
+                O programa <strong>Emprega Franca</strong> conecta empresas à mão de obra qualificada da cidade, oferecendo subsídios para contratação, treinamentos específicos e intermediação de emprego. Uma parceria entre o poder público e as empresas para fortalecer o mercado de trabalho local.
+              </p>
+              <ul class="acc-features">
+                <li><i class="fas fa-check"></i> Banco de talentos qualificados</li>
+                <li><i class="fas fa-check"></i> Subsídio para primeiros empregos</li>
+                <li><i class="fas fa-check"></i> Cursos de capacitação gratuitos</li>
+                <li><i class="fas fa-check"></i> Parcerias com escolas técnicas e universidades</li>
+              </ul>
+              <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="acc-cta">
+                Acessar Emprega Franca <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="accordion-item" data-index="4">
+          <button class="accordion-header" aria-expanded="false" aria-controls="acc-body-4">
+            <div class="acc-header-inner">
+              <div class="acc-icon orange">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <span class="acc-title">Caminho para o Emprego</span>
+            </div>
+            <div class="acc-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </button>
+          <div class="accordion-body" id="acc-body-4" hidden>
+            <div class="acc-body-inner">
+              <p>
+                O programa <strong>Emprega Franca</strong> conecta empresas à mão de obra qualificada da cidade, oferecendo subsídios para contratação, treinamentos específicos e intermediação de emprego. Uma parceria entre o poder público e as empresas para fortalecer o mercado de trabalho local.
+              </p>
+              <ul class="acc-features">
+                <li><i class="fas fa-check"></i> Banco de talentos qualificados</li>
+                <li><i class="fas fa-check"></i> Subsídio para primeiros empregos</li>
+                <li><i class="fas fa-check"></i> Cursos de capacitação gratuitos</li>
+                <li><i class="fas fa-check"></i> Parcerias com escolas técnicas e universidades</li>
+              </ul>
+              <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="acc-cta">
+                Acessar Emprega Franca <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /accordion -->
+    </div>
+  </section>
+
+  <!-- ===== RECONHECIMENTO / DEPOIMENTO ===== -->
+  <section class="section-recognition">
+    <div class="container">
+      <div class="recognition-grid">
+        <div class="recognition-text">
+          <div class="section-label">
+            <span class="label-tag">Depoimentos</span>
+          </div>
+          <h2 class="section-title dark">Reconhecimento que<br/><span class="orange-text">reforça a confiança</span></h2>
+          <p class="recognition-desc">
+            Empreendedores de diferentes segmentos escolheram Franca e encontraram na cidade o ambiente ideal para crescer. A combinação de incentivos, suporte e localização fez toda a diferença nos seus resultados.
+          </p>
+          <blockquote class="testimonial-quote">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>"Quando decidimos expandir nossa operação, Franca se destacou por oferecer tudo que precisávamos: incentivos fiscais reais, burocracia reduzida e um time da prefeitura sempre disponível para nos orientar. Hoje somos uma empresa sólida aqui."</p>
+            <footer>
+              <strong>Ana Cristina Bezerra</strong>
+              <span>Fundadora, TechFranca Soluções</span>
+            </footer>
+          </blockquote>
+          <div class="recognition-badges">
+            <div class="badge-item">
+              <i class="fas fa-trophy"></i>
+              <span>Melhor Cidade para Negócios SP 2023</span>
+            </div>
+            <div class="badge-item">
+              <i class="fas fa-star"></i>
+              <span>Top 10 Cidades Empreendedoras Brasil</span>
+            </div>
+          </div>
+        </div>
+        <div class="recognition-image">
+          <div class="recognition-photo-wrap">
+            <svg viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <defs>
+                <linearGradient id="recog-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#f8f0e8;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#f0e0c8;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <rect width="380" height="460" fill="url(#recog-bg)" rx="12"/>
+              <!-- Office background elements -->
+              <rect x="20" y="20" width="340" height="200" fill="#e8e0d0" rx="8" opacity="0.5"/>
+              <rect x="40" y="40" width="80" height="60" fill="#d0c8b8" rx="4" opacity="0.6"/>
+              <rect x="140" y="40" width="120" height="60" fill="#d0c8b8" rx="4" opacity="0.6"/>
+              <rect x="280" y="40" width="60" height="60" fill="#d0c8b8" rx="4" opacity="0.6"/>
+              <!-- Person body -->
+              <rect x="100" y="260" width="180" height="200" fill="#2a3a6a" rx="8"/>
+              <rect x="165" y="260" width="50" height="200" fill="#1a2a5a"/>
+              <!-- Shirt/blouse -->
+              <rect x="135" y="260" width="110" height="50" fill="#f5f0e8"/>
+              <!-- Head -->
+              <ellipse cx="190" cy="210" rx="55" ry="62" fill="#8B5E3C"/>
+              <!-- Hair - glasses woman -->
+              <ellipse cx="190" cy="158" rx="57" ry="25" fill="#1a0a00"/>
+              <rect x="133" y="158" width="114" height="25" fill="#1a0a00"/>
+              <!-- Side hair -->
+              <rect x="133" y="158" width="20" height="80" fill="#1a0a00"/>
+              <rect x="227" y="158" width="20" height="80" fill="#1a0a00"/>
+              <!-- Ears -->
+              <ellipse cx="135" cy="215" rx="10" ry="14" fill="#7a5030"/>
+              <ellipse cx="245" cy="215" rx="10" ry="14" fill="#7a5030"/>
+              <!-- Glasses frame -->
+              <rect x="150" y="198" width="36" height="24" fill="none" stroke="#1a1005" stroke-width="3" rx="5"/>
+              <rect x="196" y="198" width="36" height="24" fill="none" stroke="#1a1005" stroke-width="3" rx="5"/>
+              <line x1="186" y1="210" x2="196" y2="210" stroke="#1a1005" stroke-width="2.5"/>
+              <!-- Glasses reflection -->
+              <ellipse cx="164" cy="206" rx="8" ry="5" fill="white" opacity="0.3"/>
+              <ellipse cx="210" cy="206" rx="8" ry="5" fill="white" opacity="0.3"/>
+              <!-- Eyes behind glasses -->
+              <ellipse cx="168" cy="210" rx="7" ry="8" fill="white"/>
+              <ellipse cx="214" cy="210" rx="7" ry="8" fill="white"/>
+              <ellipse cx="169" cy="211" rx="5" ry="6" fill="#1a1005"/>
+              <ellipse cx="215" cy="211" rx="5" ry="6" fill="#1a1005"/>
+              <!-- Eyebrows -->
+              <path d="M 152 197 Q 168 192 184 197" stroke="#1a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M 198 197 Q 214 192 230 197" stroke="#1a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <!-- Nose -->
+              <ellipse cx="190" cy="228" rx="6" ry="5" fill="#7a5030"/>
+              <!-- Mouth / smile -->
+              <path d="M 175 242 Q 190 252 205 242" stroke="#5a2a10" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Orange accent bar -->
+              <rect x="0" y="440" width="380" height="20" fill="#FF6B00" rx="0"/>
+              <rect x="0" y="440" width="380" height="5" fill="#cc5500"/>
+            </svg>
+            <div class="recognition-photo-badge">
+              <i class="fas fa-star"></i> Empreendedora de Sucesso
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-section">
+    <div class="cta-overlay"></div>
+    <div class="cta-shapes">
+      <div class="cta-shape-1"></div>
+      <div class="cta-shape-2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-label">Pronto para dar o próximo passo?</div>
+        <h2 class="cta-title">investir ou<br/><span>expandir?</span></h2>
+        <p class="cta-desc">
+          Franca tem o ambiente, os incentivos e o suporte necessários para que seu negócio decole. Entre em contato com nossa equipe e descubra como podemos ajudar na sua decisão de investimento.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:investimentos@franca.sp.gov.br" class="btn btn-primary-cta">
+            <i class="fas fa-envelope"></i> Entre em Contato
+          </a>
+          <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cta">
+            <i class="fas fa-globe"></i> Visitar Site Oficial
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 50 55" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="48">
+              <path d="M25 2C25 2 8 12 8 28C8 38 16 48 25 52C34 48 42 38 42 28C42 12 25 2 25 2Z" fill="#FF6B00"/>
+              <path d="M25 10C25 10 14 18 14 28C14 35 19 42 25 46C31 42 36 35 36 28C36 18 25 10 25 10Z" fill="#1a2a4a"/>
+              <path d="M25 18C25 18 20 22 20 28C20 32 22 36 25 38C28 36 30 32 30 28C30 22 25 18 25 18Z" fill="#4CAF50"/>
+            </svg>
+            <div>
+              <span class="footer-logo-name">FRANCA</span>
+              <span class="footer-logo-sub">Prefeitura Municipal</span>
+            </div>
+          </div>
+          <p class="footer-desc">Cidade do interior paulista reconhecida pelo dinamismo econômico e qualidade de vida. Venha fazer parte do futuro de Franca.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="social-link"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#por-que-franca">Por que Franca?</a></li>
+            <li><a href="#investe-franca">Investe Franca</a></li>
+            <li><a href="#programas">Programas de Apoio</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programas</h4>
+          <ul class="footer-links">
+            <li><a href="#programas">Sala do Empreendedor</a></li>
+            <li><a href="#programas">Bom Crédito</a></li>
+            <li><a href="#programas">Sandbox Regulatório</a></li>
+            <li><a href="#programas">Emprega Franca</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> Franca, São Paulo — Brasil</li>
+            <li><i class="fas fa-phone"></i> (16) 3711-9000</li>
+            <li><i class="fas fa-envelope"></i> investimentos@franca.sp.gov.br</li>
+            <li><i class="fas fa-globe"></i> <a href="https://www.franca.sp.gov.br" target="_blank" rel="noopener noreferrer">www.franca.sp.gov.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Prefeitura Municipal de Franca-SP.</p>
+        <p class="footer-credit">Programa Investe Franca</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
