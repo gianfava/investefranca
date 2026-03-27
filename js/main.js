@@ -1,8 +1,3 @@
-/**
- * Franca Abre Novas Portas — Main JavaScript
- * Funcionalidades: Navbar, Accordion, Scroll Ativo, Botão Topo, Animações
- */
-
 (function () {
   'use strict';
 
