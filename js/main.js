@@ -127,54 +127,96 @@
   /* ============================
      ACCORDION
   ============================ */
-  accordionItems.forEach((item, index) => {
-    const header = item.querySelector('.accordion-header');
-    const body = item.querySelector('.accordion-body');
-    const toggleIcon = header.querySelector('.acc-toggle i');
+  // accordionItems.forEach((item, index) => {
+  //   const header = item.querySelector('.accordion-header');
+  //   const body = item.querySelector('.accordion-body');
+  //   const toggleIcon = header.querySelector('.acc-toggle i');
 
-    header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
+  //   header.addEventListener('click', () => {
+  //     const isActive = item.classList.contains('active');
 
-      // Fechar todos os itens abertos
-      accordionItems.forEach((otherItem) => {
-        if (otherItem !== item && otherItem.classList.contains('active')) {
-          const otherBody = otherItem.querySelector('.accordion-body');
-          const otherHeader = otherItem.querySelector('.accordion-header');
-          const otherToggleIcon = otherHeader.querySelector('.acc-toggle i');
+  //     // Fechar todos os itens abertos
+  //     accordionItems.forEach((otherItem) => {
+  //       if (otherItem !== item && otherItem.classList.contains('active')) {
+  //         const otherBody = otherItem.querySelector('.accordion-body');
+  //         const otherHeader = otherItem.querySelector('.accordion-header');
+  //         const otherToggleIcon = otherHeader.querySelector('.acc-toggle i');
 
-          otherItem.classList.remove('active');
-          otherBody.setAttribute('hidden', '');
-          otherHeader.setAttribute('aria-expanded', 'false');
+  //         otherItem.classList.remove('active');
+  //         otherBody.setAttribute('hidden', '');
+  //         otherHeader.setAttribute('aria-expanded', 'false');
 
-          // Mudar para ícone de "+"
-          otherToggleIcon.classList.remove('fa-minus');
-          otherToggleIcon.classList.add('fa-plus');
-        }
-      });
+  //         // Mudar para ícone de "+"
+  //         otherToggleIcon.classList.remove('fa-minus');
+  //         otherToggleIcon.classList.add('fa-plus');
+  //       }
+  //     });
 
-      // Alternar item atual
-      if (isActive) {
-        item.classList.remove('active');
-        body.setAttribute('hidden', '');
-        header.setAttribute('aria-expanded', 'false');
-        toggleIcon.classList.remove('fa-minus');
-        toggleIcon.classList.add('fa-plus');
-      } else {
-        item.classList.add('active');
-        body.removeAttribute('hidden');
-        header.setAttribute('aria-expanded', 'true');
-        toggleIcon.classList.remove('fa-plus');
-        toggleIcon.classList.add('fa-minus');
+  //     // Alternar item atual
+  //     if (isActive) {
+  //       item.classList.remove('active');
+  //       body.setAttribute('hidden', '');
+  //       header.setAttribute('aria-expanded', 'false');
+  //       toggleIcon.classList.remove('fa-minus');
+  //       toggleIcon.classList.add('fa-plus');
+  //     } else {
+  //       item.classList.add('active');
+  //       body.removeAttribute('hidden');
+  //       header.setAttribute('aria-expanded', 'true');
+  //       toggleIcon.classList.remove('fa-plus');
+  //       toggleIcon.classList.add('fa-minus');
 
-        // Scroll suave até o item aberto
-        setTimeout(() => {
-          const navHeight = navbar.offsetHeight;
-          const itemTop = item.getBoundingClientRect().top + window.scrollY - navHeight - 16;
-          window.scrollTo({ top: itemTop, behavior: 'smooth' });
-        }, 50);
+  //       // Scroll suave até o item aberto
+  //       setTimeout(() => {
+  //         const navHeight = navbar.offsetHeight;
+  //         const itemTop = item.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+  //         window.scrollTo({ top: itemTop, behavior: 'smooth' });
+  //       }, 50);
+  //     }
+  //   });
+  // });
+
+  accordionItems.forEach((item) => {
+  const header = item.querySelector('.accordion-header');
+  const body = item.querySelector('.accordion-body');
+  const toggleIcon = header.querySelector('.acc-toggle i');
+
+  header.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    // Fechar outros itens
+    accordionItems.forEach((otherItem) => {
+      if (otherItem !== item && otherItem.classList.contains('active')) {
+        const otherBody = otherItem.querySelector('.accordion-body');
+        const otherToggleIcon = otherItem.querySelector('.acc-toggle i');
+
+        otherItem.classList.remove('active');
+        otherBody.style.maxHeight = null; // Remove a altura para fechar suave
+        otherToggleIcon.classList.replace('fa-minus', 'fa-plus');
       }
     });
+
+    // Alternar item atual
+    if (isActive) {
+      item.classList.remove('active');
+      body.style.maxHeight = null; // Fecha suave
+      toggleIcon.classList.replace('fa-minus', 'fa-plus');
+    } else {
+      item.classList.add('active');
+      // Define a altura máxima como a altura real do conteúdo interno
+      body.style.maxHeight = body.scrollHeight + "px"; 
+      toggleIcon.classList.replace('fa-plus', 'fa-minus');
+
+      // Scroll suave até o item aberto
+      setTimeout(() => {
+        const navHeight = document.querySelector('.navbar').offsetHeight;
+        const itemTop = item.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+        window.scrollTo({ top: itemTop, behavior: 'smooth' });
+      }, 300); // Espera um pouco a animação começar
+    }
   });
+});
+
 
   /* ============================
      INTERSECTION OBSERVER — ANIMAÇÕES
