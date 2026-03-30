@@ -61,6 +61,8 @@ ul {
   padding: 0 24px;
 }
 
+
+
 /* ========== UTILITY CLASSES ========== */
 .orange-text {
   color: var(--orange);
@@ -82,6 +84,10 @@ ul {
   padding: 6px 16px;
   border-radius: 50px;
   border: 1px solid rgba(255, 107, 0, 0.25);
+}
+
+.feature-item, .investe-card {
+  cursor: default !important; /* Muda de 'mão' para a 'seta' padrão */
 }
 
 .label-tag-light {
@@ -115,12 +121,55 @@ ul {
 }
 
 .section-title.destaque {
-  color: var(--white);
-  background-color: var(--navy);
-  padding: 2px 5px;
-  border-radius: 8px;
-  display: inline-block;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 8px;
+    color: var(--white); /* Mantém o texto branco para contraste */
+    
+    /* Configuração do Gradiente */
+    background: var(--navy);
+    background-size: 400% 400%; /* Aumenta o fundo para permitir o movimento */
+    
+    /* Animações combinadas: o float que já tínhamos e o novo degradê */
+    animation: float-and-glow 4s ease-in-out infinite, 
+               fluid-gradient 10s ease infinite;
+    
+    will-change: transform, background-position;
 }
+
+/* Animação do Movimento das Cores */
+@keyframes fluid-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mantendo sua animação de flutuação anterior para um efeito completo */
+@keyframes float-and-glow {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 3. Ajuste opcional para o texto interno brilhar suavemente */
+.section-title.destaque .logo-franca {
+    animation: text-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes text-shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
 
 
 .section-subtitle {
@@ -238,7 +287,7 @@ ul {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.823);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 2px;
@@ -511,6 +560,7 @@ ul {
   }
 
   .hero-text{
+    margin-top: 5px;;
     margin-bottom: -300px;
   }
 
@@ -563,6 +613,28 @@ ul {
   box-shadow: var(--shadow);
   transform: translateY(-4px);
 }
+
+
+
+
+/* No seu style.css */
+.feature-item, .investe-card {
+  /* Transição suave para o movimento do mouse */
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease !important; 
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+}
+
+/* Garante que o efeito 3D sobreponha as animações de entrada */
+.animate-in.feature-item, .animate-in.investe-card {
+  opacity: 1 !important;
+  transform: none; /* Deixa o JS assumir o controlo */
+}
+
+
+
+
 
 .feature-item:hover::before {
   transform: scaleY(1);

@@ -213,6 +213,9 @@
 });
 
 
+
+
+
   /* ============================
      INTERSECTION OBSERVER — ANIMAÇÕES
   ============================ */
@@ -343,3 +346,33 @@
 
   console.log('[Franca] Site iniciado com sucesso ✅');
 })();
+
+
+// Adicionar ao final do seu arquivo js/main.js
+const aplicarEfeito3D = () => {
+  const cards = document.querySelectorAll('.feature-item, .investe-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Aumentamos a intensidade para 20deg para o efeito ser bem visível
+      const rotateX = ((y - centerY) / centerY) * -20; 
+      const rotateY = ((x - centerX) / centerX) * 20;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+    });
+  });
+};
+
+// Executa a função
+aplicarEfeito3D();
